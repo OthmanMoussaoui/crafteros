@@ -1,0 +1,12 @@
+FOOTBALL COMMENTATOR OUTPUT
+===========================
+
+EVENT 1:
+Timestamp: 0.00s
+Description: Mohamed Salah scores a beautiful goal from outside the box!
+Commentary: والله العظيم، محمد صلاح! يستلم الكرة خارج منطقة الجزاء، ينظر إلى المرمى، يسدد... تسديدة صاروخية! هدف رائع من صلاح، يا سلام، يا سلام! ما هذا الإبداع
+Language: arabic
+Audio File: /tmp/tmpxsc28wsd/segment_0.mp3
+
+---
+

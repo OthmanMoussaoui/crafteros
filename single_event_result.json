@@ -1,0 +1,19 @@
+{
+  "commentary": [
+    {
+      "timestamp": 0.0,
+      "commentary": "والله العظيم، محمد صلاح! يستلم الكرة خارج منطقة الجزاء، ينظر إلى المرمى، يسدد... تسديدة صاروخية! هدف رائع من صلاح، يا سلام، يا سلام! ما هذا الإبداع",
+      "event_description": "Mohamed Salah scores a beautiful goal from outside the box!",
+      "sport": "soccer",
+      "language": "arabic"
+    }
+  ],
+  "audio": [
+    {
+      "timestamp": 0.0,
+      "path": "/tmp/tmpxsc28wsd/segment_0.mp3",
+      "voice_id": "ThT5KcBeYPX3keUQqHPh",
+      "language": "arabic"
+    }
+  ]
+}

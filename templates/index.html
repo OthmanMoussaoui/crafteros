@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football AI Commentator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        
+        [dir="rtl"] {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .soccer-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1508098682722-e99c643e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen soccer-bg">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2 text-green-400">Football AI Commentator</h1>
+            <p class="text-xl text-gray-300">Generate professional football commentary with AI</p>
+        </header>
+        
+        <main class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-lg p-6 mb-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-3 text-green-400">Enter Event Description</h2>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-300 mb-2">Language</label>
+                        <div class="flex space-x-4">
+                            <button id="btn-english" class="language-btn bg-green-600 px-4 py-2 rounded-md hover:bg-green-700 transition">English</button>
+                            <button id="btn-arabic" class="language-btn bg-gray-700 px-4 py-2 rounded-md hover:bg-gray-600 transition">العربية</button>
+                        </div>
+                    </div>
+                    
+                    <div id="arabic-options" class="mb-4 hidden">
+                        <label class="block text-gray-300 mb-2">Commentary Style (أسلوب التعليق)</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button class="style-btn bg-gray-700 px-4 py-2 rounded-md hover:bg-gray-600 transition" data-style="حماسي">حماسي (Enthusiastic)</button>
+                            <button class="style-btn bg-gray-700 px-4 py-2 rounded-md hover:bg-gray-600 transition" data-style="هادئ">هادئ (Calm)</button>
+                            <button class="style-btn bg-gray-700 px-4 py-2 rounded-md hover:bg-gray-600 transition" data-style="رسمي">رسمي (Formal)</button>
+                            <button class="style-btn bg-gray-700 px-4 py-2 rounded-md hover:bg-gray-600 transition" data-style="عاطفي">عاطفي (Emotional)</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="event-description" class="block text-gray-300 mb-2">Event Description</label>
+                        <textarea id="event-description" rows="3" class="w-full px-3 py-2 text-gray-800 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Describe a football highlight event..."></textarea>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button id="btn-sample-event" class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition">Random Sample Event</button>
+                    </div>
+                    
+                    <button id="btn-generate" class="w-full bg-green-600 text-white py-3 rounded-md font-semibold hover:bg-green-700 transition">Generate Commentary</button>
+                </div>
+                
+                <div id="result-container" class="hidden">
+                    <h2 class="text-2xl font-semibold mb-3 text-green-400">Generated Commentary</h2>
+                    
+                    <div id="commentary-container" class="bg-gray-800 p-4 rounded-md mb-4">
+                        <p id="commentary-text" class="text-lg"></p>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <button id="btn-tts" class="bg-purple-600 px-6 py-2 rounded-md font-semibold hover:bg-purple-700 transition">
+                            <i class="fas fa-headphones mr-2"></i> Generate Voice
+                        </button>
+                        
+                        <div id="audio-container" class="hidden">
+                            <audio id="audio-player" controls></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-3 text-green-400">About This Tool</h2>
+                <p class="text-gray-300 mb-3">This AI football commentator generates realistic commentary for football events in both English and Arabic. It uses:</p>
+                
+                <ul class="list-disc pl-5 text-gray-300 space-y-1 mb-3">
+                    <li>GPT-4 for generating natural commentary</li>
+                    <li>ElevenLabs for realistic text-to-speech</li>
+                    <li>Tailored voices for different commentator styles</li>
+                </ul>
+                
+                <p class="text-gray-300">Try it out by entering a football event description or selecting a sample event!</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
