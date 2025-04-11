@@ -2,7 +2,7 @@
 
 MatchVisor is a modern web application that revolutionizes football match analysis by combining live streaming, AI-powered insights, and comprehensive statistics to deliver an immersive experience for fans, analysts, and coaches.
 
-![MatchVisor Platform Screenshot](assets/image/screen.png)
+![MatchVisor Platform Screenshot](https://github.com/OthmanMoussaoui/crafteros/blob/main/platfrom%20web/assets/image/screen.png)
 
 ## Features
 
