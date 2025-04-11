@@ -18,7 +18,6 @@ https://github.com/user-attachments/assets/bab2fc6e-25e9-4a09-8546-bd3dccd3c1bb
 - [Detection and Tactical Map Logic](#detection-and-tactical-map-logic)
 - [Analysis Workflow](#analysis-workflow)
 - [Customization](#customization)
-- [License](#license)
 
 ## Features
 
