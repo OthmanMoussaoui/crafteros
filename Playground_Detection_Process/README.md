@@ -4,7 +4,7 @@
 
 Welcome to the **Soccer Detection APP** — a smart, Python-based solution for automatic detection and tracking of football players and the ball using **YOLOv8** and **Open-cv**. Designed for coaches, analysts, and football enthusiasts, this app delivers real-time insights, tactical positioning, and annotated visuals from match footage captured by wide-angle cameras.
 
-![Tactical Analysis Frame](Streamlit_web_app/img/demo_frame.png)
+https://github.com/user-attachments/assets/bab2fc6e-25e9-4a09-8546-bd3dccd3c1bb
 
 ## Table of Contents 📑
 
