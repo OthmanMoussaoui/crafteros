@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 100% 99.6%; /* White #FEFEFE */
+    --foreground: 240 100% 0.4%; /* Black #010100 */
+
+    --card: 240 100% 99.6%;
+    --card-foreground: 240 100% 0.4%;
+
+    --popover: 240 100% 99.6%;
+    --popover-foreground: 240 100% 0.4%;
+
+    --primary: 252 75% 35%; /* Ultramarine #2C1193 */
+    --primary-foreground: 240 100% 99.6%;
+
+    --secondary: 252 33% 84%; /* Periwinkle #C9C6E7 */
+    --secondary-foreground: 252 75% 35%;
+
+    --accent: 252 31% 54%; /* Slate Blue #705EB2 */
+    --accent-foreground: 240 100% 99.6%;
+
+    --highlight: 225 76% 45%; /* Violet Blue #1C46CC */
+    --highlight-foreground: 240 100% 99.6%;
+
+    --muted: 252 33% 84%;
+    --muted-foreground: 252 31% 54%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 252 33% 84%;
+    --input: 252 33% 84%;
+    --ring: 252 75% 35%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 252 75% 35%;
+    --sidebar-foreground: 240 100% 99.6%;
+    --sidebar-primary: 240 100% 99.6%;
+    --sidebar-primary-foreground: 252 75% 35%;
+    --sidebar-accent: 252 31% 54%;
+    --sidebar-accent-foreground: 240 100% 99.6%;
+    --sidebar-border: 252 33% 84%;
+    --sidebar-ring: 252 33% 84%;
+  }
+
+  .dark {
+    --background: 240 100% 0.4%; /* Black #010100 */
+    --foreground: 240 100% 99.6%; /* White #FEFEFE */
+
+    --card: 252 75% 10%;
+    --card-foreground: 240 100% 99.6%;
+
+    --popover: 252 75% 10%;
+    --popover-foreground: 240 100% 99.6%;
+
+    --primary: 252 75% 35%; /* Ultramarine #2C1193 */
+    --primary-foreground: 240 100% 99.6%;
+
+    --secondary: 252 31% 54%; /* Slate Blue #705EB2 */
+    --secondary-foreground: 240 100% 99.6%;
+
+    --accent: 252 33% 84%; /* Periwinkle #C9C6E7 */
+    --accent-foreground: 252 75% 35%;
+
+    --highlight: 225 76% 45%; /* Violet Blue #1C46CC */
+    --highlight-foreground: 240 100% 99.6%;
+
+    --muted: 252 31% 25%;
+    --muted-foreground: 252 33% 84%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --border: 252 31% 30%;
+    --input: 252 31% 30%;
+    --ring: 252 33% 84%;
+
+    --sidebar-background: 252 75% 20%;
+    --sidebar-foreground: 240 100% 99.6%;
+    --sidebar-primary: 240 100% 99.6%;
+    --sidebar-primary-foreground: 252 75% 35%;
+    --sidebar-accent: 252 33% 84%;
+    --sidebar-accent-foreground: 252 75% 35%;
+    --sidebar-border: 252 31% 30%;
+    --sidebar-ring: 252 33% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom gradient backgrounds */
+.bg-ultramarine-gradient {
+  background: linear-gradient(135deg, #2c1193 0%, #311790 100%);
+}
+
+.bg-violet-gradient {
+  background: linear-gradient(135deg, #1c46cc 0%, #2c1193 100%);
+}
+
+/* Custom animations */
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom card styles */
+.card-hover-effect {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Custom button styles */
+@layer components {
+  .btn-primary-gradient {
+    @apply bg-gradient-to-r from-[#2C1193] to-[#1C46CC] text-white hover:from-[#311790] hover:to-[#1C46CC] transition-all duration-300;
+  }
+}

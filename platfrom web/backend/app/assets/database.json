@@ -1,0 +1,333 @@
+{
+  "users": [
+    {
+      "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "email": "admin@matchvisor.com",
+      "password_hash": "$2b$12$f8XVtFlcRsmGw9TKRe3.5eA4Z1rXfGCvODDHpYLGUfFXOi/ZHbZmS",
+      "first_name": "Admin",
+      "last_name": "User",
+      "profile_image": "/api/assets/images/profile.jpg",
+      "is_active": true,
+      "is_admin": true,
+      "preferences": {
+        "language": "en",
+        "notification_email": true,
+        "theme": "dark"
+      },
+      "last_login": "2023-04-08T18:25:43.511Z",
+      "created_at": "2023-01-15T09:12:33.123Z",
+      "updated_at": "2023-04-08T18:25:43.511Z",
+      "favorite_teams": ["team1", "team2"],
+      "saved_clips": []
+    },
+    {
+      "id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+      "email": "user@example.com",
+      "password_hash": "$2b$12$f8XVtFlcRsmGw9TKRe3.5eA4Z1rXfGCvODDHpYLGUfFXOi/ZHbZmS",
+      "first_name": "Demo",
+      "last_name": "User",
+      "profile_image": "/api/assets/images/profile.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "preferences": {
+        "language": "en",
+        "notification_email": true,
+        "theme": "light"
+      },
+      "last_login": "2023-04-09T10:15:22.331Z",
+      "created_at": "2023-02-20T14:30:11.987Z",
+      "updated_at": "2023-04-09T10:15:22.331Z",
+      "favorite_teams": ["team3"],
+      "saved_clips": ["highlight1"]
+    }
+  ],
+  "teams": [
+    {
+      "id": "team1",
+      "name": "FC Barcelona",
+      "short_name": "Barça",
+      "logo": "/api/assets/images/team_logo.jpg",
+      "country": "Spain",
+      "league_id": "league1",
+      "founded_year": 1899,
+      "stadium": "Camp Nou",
+      "colors": "Blue and Red",
+      "website": "https://www.fcbarcelona.com",
+      "created_at": "2023-01-10T08:30:00.000Z",
+      "updated_at": "2023-01-10T08:30:00.000Z"
+    },
+    {
+      "id": "team2",
+      "name": "Real Madrid",
+      "short_name": "Madrid",
+      "logo": "/api/assets/images/team_logo.jpg",
+      "country": "Spain",
+      "league_id": "league1",
+      "founded_year": 1902,
+      "stadium": "Santiago Bernabéu",
+      "colors": "White",
+      "website": "https://www.realmadrid.com",
+      "created_at": "2023-01-10T08:35:00.000Z",
+      "updated_at": "2023-01-10T08:35:00.000Z"
+    },
+    {
+      "id": "team3",
+      "name": "Manchester United",
+      "short_name": "Man Utd",
+      "logo": "/api/assets/images/team_logo.jpg",
+      "country": "England",
+      "league_id": "league2",
+      "founded_year": 1878,
+      "stadium": "Old Trafford",
+      "colors": "Red",
+      "website": "https://www.manutd.com",
+      "created_at": "2023-01-10T08:40:00.000Z",
+      "updated_at": "2023-01-10T08:40:00.000Z"
+    },
+    {
+      "id": "team4",
+      "name": "Liverpool FC",
+      "short_name": "Liverpool",
+      "logo": "/api/assets/images/team_logo.jpg",
+      "country": "England",
+      "league_id": "league2",
+      "founded_year": 1892,
+      "stadium": "Anfield",
+      "colors": "Red",
+      "website": "https://www.liverpoolfc.com",
+      "created_at": "2023-01-10T08:45:00.000Z",
+      "updated_at": "2023-01-10T08:45:00.000Z"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "league1",
+      "name": "La Liga",
+      "short_name": "La Liga",
+      "logo": "/api/assets/images/team_logo.jpg",
+      "country": "Spain",
+      "season_start": "2023-08-13",
+      "season_end": "2024-05-26",
+      "created_at": "2023-01-05T12:00:00.000Z",
+      "updated_at": "2023-01-05T12:00:00.000Z"
+    },
+    {
+      "id": "league2",
+      "name": "Premier League",
+      "short_name": "EPL",
+      "logo": "/api/assets/images/team_logo.jpg",
+      "country": "England",
+      "season_start": "2023-08-11",
+      "season_end": "2024-05-19",
+      "created_at": "2023-01-05T12:05:00.000Z",
+      "updated_at": "2023-01-05T12:05:00.000Z"
+    }
+  ],
+  "matches": [
+    {
+      "id": "match1",
+      "home_team_id": "team1",
+      "away_team_id": "team2",
+      "league_id": "league1",
+      "kickoff_time": "2023-04-10T19:00:00.000Z",
+      "status": "finished",
+      "home_score": 2,
+      "away_score": 1,
+      "stadium": "Camp Nou",
+      "referee": "John Smith",
+      "attendance": 85000,
+      "video_path": "/api/assets/videos/match1.mp4",
+      "stream_url": null,
+      "has_multi_cam": true,
+      "stats": {
+        "possession": {"home": 65, "away": 35},
+        "shots": {"home": 14, "away": 8},
+        "shots_on_target": {"home": 8, "away": 3},
+        "corners": {"home": 7, "away": 2},
+        "fouls": {"home": 10, "away": 15},
+        "yellow_cards": {"home": 2, "away": 4},
+        "red_cards": {"home": 0, "away": 0}
+      },
+      "is_processed": true,
+      "processing_status": "completed",
+      "created_at": "2023-04-05T10:00:00.000Z",
+      "updated_at": "2023-04-10T21:30:00.000Z"
+    },
+    {
+      "id": "match2",
+      "home_team_id": "team3",
+      "away_team_id": "team4",
+      "league_id": "league2",
+      "kickoff_time": "2023-04-11T15:00:00.000Z",
+      "status": "scheduled",
+      "home_score": 0,
+      "away_score": 0,
+      "stadium": "Old Trafford",
+      "referee": "Jane Doe",
+      "attendance": null,
+      "video_path": null,
+      "stream_url": null,
+      "has_multi_cam": false,
+      "stats": {},
+      "is_processed": false,
+      "processing_status": "pending",
+      "created_at": "2023-04-06T14:00:00.000Z",
+      "updated_at": "2023-04-06T14:00:00.000Z"
+    }
+  ],
+  "highlights": [
+    {
+      "id": "highlight1",
+      "match_id": "match1",
+      "title": "Goal - 21:30",
+      "description": "Fantastic goal by Player 10",
+      "type": "goal",
+      "match_time": "21:30",
+      "start_time": 1280,
+      "end_time": 1300,
+      "clip_path": "/api/assets/videos/highlight1.mp4",
+      "thumbnail_path": "/api/assets/images/soccer1.jpg",
+      "team_id": "team1",
+      "player_name": "Player 10",
+      "player_id": null,
+      "ai_caption": "Amazing strike from outside the box into the top corner",
+      "importance_score": 0.9,
+      "tags": ["goal", "long-range", "spectacular"],
+      "views_count": 1542,
+      "likes_count": 315,
+      "created_at": "2023-04-10T21:35:00.000Z",
+      "updated_at": "2023-04-10T21:35:00.000Z"
+    },
+    {
+      "id": "highlight2",
+      "match_id": "match1",
+      "title": "Goal - 67:15",
+      "description": "Header from a corner",
+      "type": "goal",
+      "match_time": "67:15",
+      "start_time": 4025,
+      "end_time": 4045,
+      "clip_path": "/api/assets/videos/highlight2.mp4",
+      "thumbnail_path": "/api/assets/images/soccer2.jpg",
+      "team_id": "team1",
+      "player_name": "Player 5",
+      "player_id": null,
+      "ai_caption": "Powerful header from a corner kick",
+      "importance_score": 0.8,
+      "tags": ["goal", "header", "corner"],
+      "views_count": 1203,
+      "likes_count": 228,
+      "created_at": "2023-04-10T21:40:00.000Z",
+      "updated_at": "2023-04-10T21:40:00.000Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event1",
+      "match_id": "match1",
+      "event_type": "goal",
+      "minute": 21,
+      "second": 30,
+      "team_id": "team1",
+      "player_name": "Player 10",
+      "player_id": null,
+      "description": "Goal scored by Player 10 for FC Barcelona",
+      "assist_by": "Player 8",
+      "card_type": null,
+      "var_decision": null,
+      "video_timestamp": 1290,
+      "created_at": "2023-04-10T21:30:00.000Z"
+    },
+    {
+      "id": "event2",
+      "match_id": "match1",
+      "event_type": "goal",
+      "minute": 67,
+      "second": 15,
+      "team_id": "team1",
+      "player_name": "Player 5",
+      "player_id": null,
+      "description": "Goal scored by Player 5 for FC Barcelona",
+      "assist_by": "Player 7",
+      "card_type": null,
+      "var_decision": null,
+      "video_timestamp": 4035,
+      "created_at": "2023-04-10T21:30:00.000Z"
+    },
+    {
+      "id": "event3",
+      "match_id": "match1",
+      "event_type": "goal",
+      "minute": 79,
+      "second": 45,
+      "team_id": "team2",
+      "player_name": "Player 9",
+      "player_id": null,
+      "description": "Goal scored by Player 9 for Real Madrid",
+      "assist_by": "Player 11",
+      "card_type": null,
+      "var_decision": null,
+      "video_timestamp": 4785,
+      "created_at": "2023-04-10T21:30:00.000Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "report1",
+      "match_id": "match1",
+      "summary": "FC Barcelona dominated possession in this match and created more scoring opportunities. Their pressing game was particularly effective, forcing Real Madrid into errors in their own half. The first goal came from a spectacular long-range strike, while the second was a well-executed set piece.",
+      "heatmap_data": {
+        "home_team": {
+          "overall": [[0.2, 0.3, 0.5, 0.7, 0.8, 0.9, 0.8, 0.7, 0.5, 0.3]]
+        },
+        "away_team": {
+          "overall": [[0.1, 0.2, 0.3, 0.4, 0.5, 0.4, 0.3, 0.2, 0.1, 0.1]]
+        }
+      },
+      "pass_map_data": {
+        "home_team": {
+          "successful": 435,
+          "unsuccessful": 65
+        },
+        "away_team": {
+          "successful": 223,
+          "unsuccessful": 88
+        }
+      },
+      "shot_map_data": {
+        "home_team": [
+          {"x": 0.8, "y": 0.5, "xG": 0.7, "result": "goal"},
+          {"x": 0.9, "y": 0.3, "xG": 0.8, "result": "goal"},
+          {"x": 0.7, "y": 0.6, "xG": 0.4, "result": "miss"}
+        ],
+        "away_team": [
+          {"x": 0.2, "y": 0.4, "xG": 0.6, "result": "goal"},
+          {"x": 0.1, "y": 0.5, "xG": 0.3, "result": "miss"}
+        ]
+      },
+      "player_ratings": {
+        "home_team": {
+          "player_1": 8.2,
+          "player_5": 8.7,
+          "player_10": 9.1
+        },
+        "away_team": {
+          "player_1": 7.6,
+          "player_9": 8.3
+        }
+      },
+      "key_stats": {
+        "possession": {"home": 65, "away": 35},
+        "shots": {"home": 14, "away": 8},
+        "shots_on_target": {"home": 8, "away": 3},
+        "corners": {"home": 7, "away": 2},
+        "fouls": {"home": 10, "away": 15},
+        "yellow_cards": {"home": 2, "away": 4},
+        "red_cards": {"home": 0, "away": 0}
+      },
+      "generated_at": "2023-04-10T21:30:00.000Z",
+      "updated_at": "2023-04-10T21:30:00.000Z"
+    }
+  ],
+  "reels": []
+} 
